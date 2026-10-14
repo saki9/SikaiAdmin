@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<RootNamespace>SikaiAdmin</RootNamespace>
+		<AssemblyName>SikaiAdmin</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="admin_setup.sql" />
+	  <None Remove="Assets\gba_shell.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Assets\gba_shell.png" />
+	  <Resource Include="Assets\Fonts\*.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Oracle.ManagedDataAccess" Version="23.26.301" />
+		<Reference Include="System.Configuration" />
+	</ItemGroup>
+
+</Project>
